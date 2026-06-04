@@ -1,0 +1,39 @@
+FlowApp
+    Back
+    Header
+    Board
+        Node
+        Edge
+    SidePalette
+        Header
+        Item
+
+Nodes{
+    1: 0:{id: 0, shape: NODE_SHAPES.terminator.name, text: "abc", x:0, y:0, width:220, height:70,branch: 0, nexts: {2: {direction: 'down'}}, prevs: {}, disabledBtnDirections: ['up', 'right', 'left']}
+}
+
+NODE_SHAPES{
+  point: {id: 0, name: 'point', img: pointImg, disabledBtnDirections: ['up', 'down', 'right', 'left']}, 
+  terminator: {id: 1, name: 'terminator', img: terminatorImg, disabledBtnDirections: ['right', 'left']}, 
+  process: {id: 2, name: 'process', img: processImg, disabledBtnDirections: ['right', 'left']}, 
+  decide: {id: 3, name: 'decide', img: decideImg, disabledBtnDirections: ['left']}, 
+  data: {id: 4, name: 'data', img: dataImg, disabledBtnDirections: ['right', 'left']}, 
+  loop: {id: 5, name: 'loop', img: loopImg, disabledBtnDirections: ['right', 'left']}, 
+  loopEnd: {id: 6, name: 'loopEnd', img: loopEndImg, disabledBtnDirections: ['right', 'left']}, 
+  arrow: {id: 7, name: 'arrow', img: arrowImg, disabledBtnDirections: ['right', 'left']}
+}
+
+Edges{1:{id: 1,from: -1,to: -1,x1: 0,y1: 0,x2: 0,y2: 0}};
+
+Branches{1:{id: 1,sourceBranchId: sourceBranchId,endPointNodeId: 0,arrowNodeId: 0}};
+
+
+
+Ifs{
+    {id: 1, nodeId: 1, yesDown: true}
+}
+
+
+Img{
+    {id: 1, src: "aa/bb/cc/jpg"}
+}
