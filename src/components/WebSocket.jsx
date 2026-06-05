@@ -9,7 +9,7 @@ export function WebSocketProvider({nodeNum, setNodes, branchNum, setBranches, ch
     const wsRef = useRef(null);
 
     useEffect(() => {
-        const ws = new WebSocket('https://flow-backend-w8q7.onrender.com:8080/websocket/board');
+        const ws = new WebSocket('wss://flow-backend-w8q7.onrender.com/websocket/board');
         wsRef.current = ws;
 
         //メッセージ受信時
