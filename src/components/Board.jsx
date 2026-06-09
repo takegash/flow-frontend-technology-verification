@@ -71,6 +71,9 @@ function Board({
     if(!isWaitingSelectEdge || selectedEdge == null){
       return;
     }
+    if(waitingConnectNodeId == null || !(waitingConnectNodeId in nodes)){
+      return;
+    }
 
     //edgeを選択後、選択されたedgeが元の枝のものだったら接続
     let edgeFromNodeId = edges[selectedEdge].from,
